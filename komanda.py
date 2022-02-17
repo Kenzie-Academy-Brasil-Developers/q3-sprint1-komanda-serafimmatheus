@@ -37,23 +37,17 @@ menu = [
     {'id': 34, 'name': 'FRENCH TOAST', 'price': 5.0}
 ]
 
-table_1 = [{'id': 1, 'amount': 5}, {'id': 19, 'amount': 1}, {'id': 22, 'amount': 6}]
-table_2 = [{'id': 14, 'amount': 3}, {'id': 17, 'amount': 2}, {'id': 21, 'amount': 4}]
-table_3 = [{'id': 11, 'amount': 1}, {'id': 12, 'amount': 3}, {'id': 21, 'amount': 1}]
-table_4 = [{'id': 34, 'amount': 2}, {'id': 15, 'amount': 4}, {'id': 25, 'amount': 1}]
-table_5 = [{'id': 24, 'amount': 4}, {'id': 28, 'amount': 2}, {'id': 29, 'amount': 2}]
+table_1 = [{'id': 1, 'amount': 5}, {'id': 19, 'amount': 3}]
 
-def calculate_tab(total, name_table):
+
+def calculate_tab(total):
     soma = 0
     for i in total:
         for c in menu:
             if i["id"] == c["id"]:
                 soma += c["price"] * i["amount"]
-    print(f"Total da {name_table} é: R${soma:.2f}")
+    print(f"Total é: R${soma:.2f}")
 
     
-calculate_tab(table_1, "mesa_1")
-calculate_tab(table_2, "mesa_2")
-calculate_tab(table_3, "mesa_3")
-calculate_tab(table_4, "mesa_4")
-calculate_tab(table_5, "mesa_5")
+calculate_tab(table_1)
+
